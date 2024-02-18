@@ -8,12 +8,12 @@
         },
         {
             id:2,
-            img:'./image/breakfast1.jpg',
+            img:'./image/breakfast2.jpg',
             text:'Good to Eat',
         },
         {
             id:3,
-            img:'./image/breakfast1.jpg',
+            img:'./image/breakfast3.jpg',
             text:'Excellent to Eat',
         },
         {
@@ -23,7 +23,7 @@
         },
         {
             id:5,
-            img:'./image/breakfast1.jpg',
+            img:'./image/breakfast5.jpg',
             text:'All Day to Eat',
         },
     ])
@@ -54,9 +54,9 @@
             firstId.value = 5
         }
     }
-    const autoSlide = onMounted(() => {
-        setInterval(nextHandler, 5000)
-    })
+    // const autoSlide = onMounted(() => {
+    //     setInterval(nextHandler, 5000)
+    // })
 </script>
 
 <template>
@@ -72,11 +72,11 @@
             </TransitionGroup>
         </div>
         <div class="control">
-            <button @click="preHandler">&larr;</button>
+            <span @click="preHandler">&larr;</span>
             <div class="center">
                 <span v-for="item of data" :key="item.id" @click="carShow(item.id)"> </span>
             </div>
-            <button @click="nextHandler">&rarr;</button>
+            <span @click="nextHandler">&rarr;</span>
         </div>
     </div>
 </template>
@@ -87,23 +87,6 @@
     flex-direction: column;
     z-index: -2;
 }
-.center {
-    width: 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    span {
-        margin: 0 4%;
-        border-radius: 50%;
-        width: 7px;
-        height: 7px;
-        background-color: #353535;
-        cursor: pointer;
-        padding: -3% 0;
-    }
-}
-
 .data {
     position: relative;
     width: 100%;
@@ -140,25 +123,53 @@
         width: 100%;
         height: 100vh;
         background-color: black;
-        opacity: 30%;
+        opacity: 20%;
         overflow: hidden;
     }
+
+
 }
 
 .control {
     width: 100%;
     margin: .3rem 0;
     display: flex;
-    justify-content: center;
-
-    button {
-        margin: 0 20px;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    & span {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        color: white;
+        margin: 0 10px;
         cursor: pointer;
-        font-size: 25px;
+        font-size: 40px;
+        opacity:.5;
     }
-    .center{
-        width: 15%;
+    & span:hover{
+        opacity:.8;
+        transition:.5s;
     }
+    .center {
+        width: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: none;
+        span {
+            margin: 0 4%;
+            border-radius: 50%;
+            width: 7px;
+            height: 7px;
+            background-color: #353535;
+            cursor: pointer;
+            padding: -3% 0;
+        }
+    }    
 }
 
 .next-leave-from {

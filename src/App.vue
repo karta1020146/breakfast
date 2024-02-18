@@ -6,7 +6,9 @@ import { RouterLink, RouterView } from 'vue-router'
   <header>
     <div class="wrapper">
       <div class="logo">
-        <img alt="Vue logo" class="logo" src="@/assets/logo.svg"/>
+        <RouterLink to="/">
+          <img alt="Vue logo" class="logo" src="@/assets/breadLogo.svg"/>
+        </RouterLink>
       </div>
       <nav>
         <!-- <RouterLink to="/">Home</RouterLink>
@@ -41,8 +43,10 @@ import { RouterLink, RouterView } from 'vue-router'
   & .logo{
     width: 8%;
     & img{
-      width: 50px;
-      height: 50px;
+      width: 80px;
+      height: 80px;
+      vertical-align: bottom;
+      margin-left: 10%;
     }
   }
   & nav{
@@ -54,6 +58,9 @@ import { RouterLink, RouterView } from 'vue-router'
       margin: 0 1%;
       text-decoration: none;
       color: white;
+    }
+    & a:hover{
+      color: orange;
     }  
   }
 }
