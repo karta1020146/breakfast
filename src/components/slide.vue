@@ -3,27 +3,27 @@
     const data = ref([
         {
             id:1,
-            img:'../../public/breakfast.jpg',
+            img:'./image/breakfast1.jpg',
             text:'Nice to Eat',
         },
         {
             id:2,
-            img:'../../public/breakfast.jpg',
+            img:'./image/breakfast1.jpg',
             text:'Good to Eat',
         },
         {
             id:3,
-            img:'../../public/breakfast.jpg',
+            img:'./image/breakfast1.jpg',
             text:'Excellent to Eat',
         },
         {
             id:4,
-            img:'../../public/breakfast.jpg',
+            img:'./image/breakfast1.jpg',
             text:'Perfext to Eat',
         },
         {
             id:5,
-            img:'../../public/breakfast.jpg',
+            img:'./image/breakfast1.jpg',
             text:'All Day to Eat',
         },
     ])
