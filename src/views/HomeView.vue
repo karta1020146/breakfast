@@ -17,5 +17,5 @@ import slide from '../components/slide.vue'
     width: 100%;
     /* height: 200vh; */
     background-color: white;
-  }
+  } 
 </style>
