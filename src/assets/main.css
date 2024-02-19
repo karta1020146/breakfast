@@ -10,6 +10,8 @@
   box-sizing: border-box;
 }
 :root{
-  --cardCount:3;
-  --cardMargin:1.5%;
+  --nCardCount:3;
+  --nCardMargin:2%;
+  --sCardCount:3;
+  --sCardMargin:1.5%;
 }

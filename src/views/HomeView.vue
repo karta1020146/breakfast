@@ -40,6 +40,44 @@
         englisg:'Certification',
     },
   ])
+  const newsData = ref([
+    {
+        id:1,
+        img:'./image/store.jpg',
+        title:'【龍年大回饋】',
+        date:'2024-01-08',
+    },
+    {
+        id:2,
+        img:'./image/breakfast3.jpg',
+        title:'【超值加點小物】',
+        date:'2024-02-10',
+    },
+    {
+        id:3,
+        img:'./image/hands.jpg',
+        title:'【熱可可】 溫暖整個冬天',
+        date:'2023-11-01',
+    },
+    // {
+    //     id:4,
+    //     img:'./image/hire.jpg',
+    //     title:'人才招募',
+    //     englisg:'Hiring',
+    // },
+    // {
+    //     id:5,
+    //     img:'./image/member.jpg',
+    //     title:'加入會員',
+    //     englisg:'Join us',
+    // },
+    // {
+    //     id:6,
+    //     img:'./image/wash.jpg',
+    //     title:'吃的安心',
+    //     englisg:'Certification',
+    // },
+  ])
   const toTop =(() =>{
     window.scrollTo({
       top:0,
@@ -73,6 +111,21 @@
           <h2>最新消息</h2>
           <h3>―  News  ―</h3>
         </div>
+        <div class="cardCntainer">
+          <div class="card" v-for="item in newsData" :key="item.id">
+            <img :src="item.img" alt="">
+            <div class="board">
+              <div class="txt">
+                <h3>{{ item.title }}</h3>
+              </div>
+            </div>
+            <div class="date">
+              <h4>
+                {{ item.date }}    
+              </h4>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="service">
@@ -83,17 +136,27 @@
           <h3>―  Service  ―</h3>
         </div>
         <div class="sCard">
+
+
           <div class="item" v-for="item in serviceData" :key="item.id">
             <router-link to="/">
+
+
               <img :src="item.img" alt="">
+
+
               <div class="board">
                 <div class="txt">
                   <h3>{{ item.title }}</h3>
                   <h4>{{ item.englisg }}</h4>
                 </div>
               </div>
+
+
             </router-link>
           </div>
+
+
         </div>
       </div>
       <div class="top">
@@ -187,6 +250,79 @@
             font-family: "Courgette";
           }
         }
+        & .cardCntainer{
+          margin: auto;
+          width: 60%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          & .card{
+            cursor: pointer;
+            border-radius: 10px;
+            width: calc((100% - var(--nCardCount) * var(--nCardMargin) * 2) / var(--nCardCount) );
+            margin: var(--nCardMargin);
+            height: 370px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            & .board{
+              border-radius: 10px;
+              width: 100%;
+              height: 25%;
+              text-align: center;
+              background-color: rgba(0, 0, 0, 0.61);
+              position: absolute;
+              transition: .6s;
+              & .txt{
+                color: white;
+                width: 100%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                & h3{
+                  width: 100%;
+                  margin: 4% 0;
+                  font-size: 24px;
+                }
+              }
+            }
+            & img{
+              border-radius: 10px;
+              width: 100%;
+              height: 100%;
+              vertical-align: bottom;
+              object-fit: cover;
+            }
+            & .date{
+              width: 100px;
+              height: 30px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background-color: orange;
+              border-radius: 5px;
+              position: absolute;
+              bottom: -5%;
+              left: 50%;
+              transform: translate(-50%);
+            }
+          }
+          & .card:hover .board{
+            height: 100%;
+            & .txt{
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50% , -50%);
+              & h3{
+                color: orange;
+              }
+            }
+          }
+          
+        }
       }
     }
   }
@@ -224,29 +360,35 @@
           flex-wrap: wrap;
           margin: auto;
           & .item{
+            display: flex;
+            justify-content: flex-end;
             border-radius: 10px;
-            width: calc( ( 100% - var(--cardCount) * var(--cardMargin) * 2 ) / var(--cardCount) );
-            margin: var(--cardMargin);
+            width: calc( ( 100% - var(--sCardCount) * var(--sCardMargin) * 2 ) / var(--sCardCount) );
+            margin: var(--sCardMargin);
             height: 360px;
-            overflow: hidden;
             position: relative;
             & img{
+              border-radius: 10px;
               width: 100%;
-              height: 380px;
+              height: 100%;
               object-fit: cover;
             }
             & .board{
+              border-radius: 10px;
               width: 100%;
-              height: 100%;
+              height: 25%;
               text-align: center;
               display: block;
               background-color: rgba(0, 0, 0, 0.61);
               position: absolute;
-              top: 70%;
-              left: 0;
+              bottom: 0;
               transition: .6s;
               & .txt{
                 color: white;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50% , -50%);
                 & h3{
                   margin: 4% 0;
                   font-size: 24px;
@@ -259,15 +401,9 @@
             }
           }
           & .item:hover .board{
-            top: 0;
-            & .txt{
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50% , -50%);
-              & h3{
-                color: orange;
-              }
+            height: 100%;
+            & h3{
+              color: orange;
             }
           }
         }
