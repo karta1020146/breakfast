@@ -18,7 +18,7 @@
         },
         {
             id:4,
-            img:'./image/breakfast1.jpg',
+            img:'./image/breakfast4.jpg',
             text:'Perfext to Eat',
         },
         {
@@ -27,9 +27,7 @@
             text:'All Day to Eat',
         },
     ])
-    // const props = defineProps({
-    //     data:Array
-    // })
+
     const firstId = ref(1)
     const name = ref(true)
     const nameShow = computed(() => {
