@@ -18,7 +18,7 @@
     {
         id:3,
         img:'./image/hands.jpg',
-        title:'加盟',
+        title:'我要加盟',
         englisg:'Join us',
     },
     {
@@ -43,49 +43,29 @@
   const newsData = ref([
     {
         id:1,
-        img:'./image/store.jpg',
+        img:'./image/newYear.jpg',
         title:'【龍年大回饋】',
         date:'2024-01-08',
     },
     {
         id:2,
-        img:'./image/breakfast3.jpg',
+        img:'./image/food.jpg',
         title:'【超值加點小物】',
         date:'2024-02-10',
     },
     {
         id:3,
-        img:'./image/hands.jpg',
+        img:'./image/cocoa.jpg',
         title:'【熱可可】 溫暖整個冬天',
         date:'2023-11-01',
     },
-    // {
-    //     id:4,
-    //     img:'./image/hire.jpg',
-    //     title:'人才招募',
-    //     englisg:'Hiring',
-    // },
-    // {
-    //     id:5,
-    //     img:'./image/member.jpg',
-    //     title:'加入會員',
-    //     englisg:'Join us',
-    // },
-    // {
-    //     id:6,
-    //     img:'./image/wash.jpg',
-    //     title:'吃的安心',
-    //     englisg:'Certification',
-    // },
   ])
   const toTop =(() =>{
     window.scrollTo({
       top:0,
       behavior:'smooth'
+    })
   })
-
-  })
-
 </script>
 
 <template>
@@ -136,27 +116,17 @@
           <h3>―  Service  ―</h3>
         </div>
         <div class="sCard">
-
-
           <div class="item" v-for="item in serviceData" :key="item.id">
             <router-link to="/">
-
-
               <img :src="item.img" alt="">
-
-
               <div class="board">
                 <div class="txt">
                   <h3>{{ item.title }}</h3>
                   <h4>{{ item.englisg }}</h4>
                 </div>
               </div>
-
-
             </router-link>
           </div>
-
-
         </div>
       </div>
       <div class="top">
@@ -164,6 +134,41 @@
       </div>
     </div>
   </main>
+  <footer>
+    <div class="top">
+      <div class="tContainer">
+        <div class="video">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/4DLRPQzutzo?si=ey8QBQudoluiolF8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="text">
+          <h2>加盟 MYbreakfast 邁向成功</h2>
+          <h3>―  Join us  ―</h3>
+          <p>我們的口號是『每天都是新的滋味！』，讓您在美味的早晨開始一天。品味每一口，感受溫馨與美好。在這裡，MYbreakfast不僅是早餐，更是快樂與活力的起點。和我們一起迎接每天的全新開始，讓美味成為您的日常享受！</p>
+          <div class="more">
+            <h3 >More</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="map">
+      <div class="mContainer">
+        <div class="text">
+          <h3>漢堡股份有限公司</h3>
+          <p><span>聯絡電話:</span> 0800-000-188</p>
+          <p><span>聯絡地址:</span> 110台北市信義區信義路</p>
+        </div>
+        <div class="frame">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d985.5508601611273!2d121.56436819801692!3d25.033519373232995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abb6e9d93249%3A0xd508f7b3aa02d931!2z5Y-w5YyXMTAx6KeA5pmv5Y-w!5e0!3m2!1szh-TW!2stw!4v1708412182317!5m2!1szh-TW!2stw" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+      <div class="community">
+        <a href=""><img src="../assets/ins.svg" alt=""></a>
+        <a href=""><img src="../assets/fb.svg" alt=""></a>
+        <a href=""><img src="../assets/apple.svg" alt=""></a>
+        <a href=""><img src="../assets/android.svg" alt=""></a>
+      </div>
+    </div>
+  </footer>
   
 </template>
 <style scoped>
@@ -173,7 +178,6 @@
   }
   main{
     width: 100%;
-    height: 200vh;
     .image{
       width: 100%;
       height: 62vh;
@@ -196,13 +200,8 @@
     & .text {
       height: 38vh;
       text-align: center;
-      & h4{
-        width: 100%;
-        text-align: center;
-        color: gray;
-        font-family: "Courgette";
-        font-size: 16px;
-        margin: 1.5% 0;
+      & h2{
+        font-size: 2.5rem;
       }
       & h3{
         color: gray;letter-spacing: 1px;
@@ -210,7 +209,16 @@
         margin:2% auto;
         text-align: center;
         width: 25%;
-        font-size: 15px;
+        font-size: 1rem;
+        letter-spacing: 3px;
+      }
+      & h4{
+        width: 100%;
+        text-align: center;
+        color: gray;
+        font-family: "Courgette";
+        font-size: 1rem;
+        margin: 1.5% 0;
       }
     }
     .news{
@@ -227,7 +235,6 @@
       background-attachment: fixed;
       .container{
         width: 100%;
-        height: 100vh;
         backdrop-filter: blur(5px);
         & .title{
           margin: 3% 0;
@@ -239,14 +246,14 @@
           & h2{
             display: block;
             z-index: 3;
-            font-size: 50px;
+            font-size: 2.5rem;
             margin:1.5% 0;
           }
           & h3{
             display: block;
             z-index: 3;
             width: 100%;
-            font-size: 20px;
+            font-size: 1.5rem;
             font-family: "Courgette";
           }
         }
@@ -284,7 +291,7 @@
                 & h3{
                   width: 100%;
                   margin: 4% 0;
-                  font-size: 24px;
+                  font-size: 1.5rem;
                 }
               }
             }
@@ -321,17 +328,14 @@
               }
             }
           }
-          
         }
       }
     }
-  }
-  .service{
+    & .service{
     width: 100%;
-    height: 120vh;
+    height: 130vh;
     .sContainer{
         width: 100%;
-        height: 120vh;
         text-align: center;
         & .sTitle{
           margin: 3% 0;
@@ -343,14 +347,15 @@
           & h2{
             display: block;
             z-index: 3;
-            font-size: 50px;
+            font-size: 2.5rem;
             margin:1.5% 0;
           }
           & h3{
             display: block;
+            color: gray;
             z-index: 3;
             width: 100%;
-            font-size: 20px;
+            font-size: 1.5rem;
             font-family: "Courgette";
           }
         }
@@ -391,11 +396,11 @@
                 transform: translate(-50% , -50%);
                 & h3{
                   margin: 4% 0;
-                  font-size: 24px;
+                  font-size: 1.5rem;
                 }
                 & h4{
                   margin: 4% 0;
-                  font-size: 15px;
+                  font-size: 1rem;
                 }
               }
             }
@@ -428,5 +433,110 @@
           color: white;
         }
       }
-  } 
+    }
+  }
+  footer{
+    background-color: rgba(255, 0, 0, 0.217);
+    color: white;
+    width: 100%;
+    height: 100vh;
+    & .top{
+      background-image: url(/image/footer.jpg);
+      background-attachment: fixed;
+      width: 100%;
+      height: 50vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      & .tContainer{
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        & .video{
+          width: 45%;
+          display: flex;
+          padding: 2%;
+        }
+        & .text{
+          width: 55%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          & h2{
+            font-size: 2.5rem;
+          }
+          & h3{
+            margin: 1% 0;
+          }
+          & p{
+            font-weight: bolder;
+            line-height: 1.8;
+            margin: 1% 0;
+          }
+          & .more{
+            width: 100%;
+            display: flex;
+            & h3{
+              border: 1px solid orange;
+              border-radius: 8px;
+              width: 80px;
+              height: 30px;
+              padding: 3%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin: .5% auto;
+              cursor: pointer;
+              transition: .3s;
+            }
+            & h3:hover{
+              background-color: orange;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+    & .map{
+        width: 100%;
+        height: 35vh;
+        display: flex;
+        flex-direction: column;
+        background-color: #1e1e1e;
+        & .mContainer{
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: auto;
+          & .frame{
+            box-sizing: border-box;
+            padding: 1.5%;
+          }
+          & h3{
+            font-size: 2rem;
+          }
+          & p{
+            margin: 2% 0;
+            & span{
+              color: gray;
+            }
+          }
+        }
+        & .community{
+          width: 100%;
+          text-align: center;
+          & img{
+            width: 2%;
+            margin: 0 .5% 1% ;
+          }
+          & img:hover{
+            transition: .3s;
+            filter: hue-rotate(120deg);
+          }
+        }
+      }
+  }
 </style>

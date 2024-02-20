@@ -2,16 +2,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 /* @import "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"; */
+:root{
+  --nCardCount:3;
+  --nCardMargin:2%;
+  --sCardCount:3;
+  --sCardMargin:1.5%;
+  --fz:16px;
+}
+
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-:root{
-  --nCardCount:3;
-  --nCardMargin:2%;
-  --sCardCount:3;
-  --sCardMargin:1.5%;
+  font-style: var(--fz);
 }
