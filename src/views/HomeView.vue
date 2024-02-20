@@ -150,24 +150,6 @@
         </div>
       </div>
     </div>
-    <div class="map">
-      <div class="mContainer">
-        <div class="text">
-          <h3>漢堡股份有限公司</h3>
-          <p><span>聯絡電話:</span> 0800-000-188</p>
-          <p><span>聯絡地址:</span> 110台北市信義區信義路</p>
-        </div>
-        <div class="frame">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d985.5508601611273!2d121.56436819801692!3d25.033519373232995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abb6e9d93249%3A0xd508f7b3aa02d931!2z5Y-w5YyXMTAx6KeA5pmv5Y-w!5e0!3m2!1szh-TW!2stw!4v1708412182317!5m2!1szh-TW!2stw" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-      </div>
-      <div class="community">
-        <a href=""><img src="../assets/ins.svg" alt=""></a>
-        <a href=""><img src="../assets/fb.svg" alt=""></a>
-        <a href=""><img src="../assets/apple.svg" alt=""></a>
-        <a href=""><img src="../assets/android.svg" alt=""></a>
-      </div>
-    </div>
   </footer>
   
 </template>
@@ -436,10 +418,9 @@
     }
   }
   footer{
-    background-color: rgba(255, 0, 0, 0.217);
+    background-color: black;
     color: white;
     width: 100%;
-    height: 100vh;
     & .top{
       background-image: url(/image/footer.jpg);
       background-attachment: fixed;
@@ -499,44 +480,10 @@
         }
       }
     }
-    & .map{
-        width: 100%;
-        height: 35vh;
-        display: flex;
-        flex-direction: column;
-        background-color: #1e1e1e;
-        & .mContainer{
-          width: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          margin: auto;
-          & .frame{
-            box-sizing: border-box;
-            padding: 1.5%;
-          }
-          & h3{
-            font-size: 2rem;
-          }
-          & p{
-            margin: 2% 0;
-            & span{
-              color: gray;
-            }
-          }
-        }
-        & .community{
-          width: 100%;
-          text-align: center;
-          & img{
-            width: 2%;
-            margin: 0 .5% 1% ;
-          }
-          & img:hover{
-            transition: .3s;
-            filter: hue-rotate(120deg);
-          }
-        }
-      }
+  }
+  @media screen and (max-width:1024px) {
+    h1{
+      background-color: red;
+    }
   }
 </style>
