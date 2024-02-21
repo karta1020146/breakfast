@@ -153,7 +153,7 @@
   </footer>
   
 </template>
-<style scoped>
-  @import url(../assets/HomeView.css);
-  @import url(../assets/HomeViewRwd.css);
+<style lang="scss" scoped>
+  @import url(../assets/style/HomeView.scss);
+  @import url(../assets/style/HomeViewRwd.scss);
 </style>

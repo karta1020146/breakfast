@@ -1,16 +1,16 @@
 @media screen and (max-width:1024px) {
-    & main .image {
+    main .image {
         height: auto !important;
     }
 
-    & main .text {
+    main .text {
         height: auto !important;
     }
-    & .service .top {
+    .service .top {
         padding: 3% !important;
     } 
 
-    & .tContainer {
+    .tContainer {
         width: 80% !important;
         flex-direction: column;
 
