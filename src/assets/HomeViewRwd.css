@@ -1,0 +1,24 @@
+@media screen and (max-width:1024px) {
+    & main .image {
+        height: auto !important;
+    }
+
+    & main .text {
+        height: auto !important;
+    }
+
+    & .tContainer {
+        width: 80% !important;
+        flex-direction: column;
+
+        & .video {
+            width: 100% !important;
+            padding: 5%;
+        }
+
+        & .text {
+            width: 100% !important;
+        }
+    }
+
+}

@@ -1,0 +1,416 @@
+header {
+    width: 100%;
+    background-color: white;
+}
+
+main {
+    width: 100%;
+
+    & .image {
+        width: 100%;
+        height: 62vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+        text-align: center;
+
+        & .logo {
+            width: 80px;
+        }
+
+        & .banner {
+            width: 35%;
+        }
+
+        & svg {
+            width: 80px;
+            height: 80px;
+        }
+    }
+
+    & .text {
+        height: 38vh;
+        text-align: center;
+
+        & h2 {
+            font-size: 2.5rem;
+        }
+
+        & h3 {
+            color: gray;
+            letter-spacing: 1px;
+            line-height: 1.5;
+            margin: 2% auto;
+            text-align: center;
+            width: 25%;
+            font-size: 1rem;
+            letter-spacing: 3px;
+        }
+
+        & h4 {
+            width: 100%;
+            text-align: center;
+            color: gray;
+            font-family: "Courgette";
+            font-size: 1rem;
+            margin: 1.5% 0;
+        }
+    }
+
+    & .news {
+        width: 100%;
+        /* height: 100vh; */
+        color: white;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        z-index: 0;
+        background: url(@/assets/table.jpg) fixed;
+        background-size: 100%;
+        background-position: 50% 50%;
+        background-attachment: fixed;
+
+        & .container {
+            width: 100%;
+            backdrop-filter: blur(5px);
+
+            & .title {
+                margin: 3% 0;
+
+                & img {
+                    width: 80px;
+                    height: 80px;
+                    vertical-align: bottom;
+                }
+
+                & h2 {
+                    display: block;
+                    z-index: 3;
+                    font-size: 2.5rem;
+                    margin: 1.5% 0;
+                }
+
+                & h3 {
+                    display: block;
+                    z-index: 3;
+                    width: 100%;
+                    font-size: 1.5rem;
+                    font-family: "Courgette";
+                }
+            }
+
+            & .cardCntainer {
+                margin: auto;
+                width: 60%;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+
+                & .card {
+                    cursor: pointer;
+                    border-radius: 10px;
+                    width: calc((100% - var(--nCardCount) * var(--nCardMargin) * 2) / var(--nCardCount));
+                    margin: var(--nCardMargin);
+                    height: 370px;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    transition: .3s;
+
+                    & .board {
+                        border-radius: 10px;
+                        width: 100%;
+                        height: 25%;
+                        text-align: center;
+                        background-color: rgba(0, 0, 0, 0.61);
+                        position: absolute;
+                        transition: .6s;
+
+                        & .txt {
+                            color: white;
+                            width: 100%;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+
+                            & h3 {
+                                width: 100%;
+                                margin: 4% 0;
+                                font-size: 1.5rem;
+                            }
+                        }
+                    }
+
+                    & img {
+                        border-radius: 10px;
+                        width: 100%;
+                        height: 100%;
+                        vertical-align: bottom;
+                        object-fit: cover;
+                    }
+
+                    & .date {
+                        width: 100px;
+                        height: 30px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: orange;
+                        border-radius: 5px;
+                        position: absolute;
+                        bottom: -5%;
+                        left: 50%;
+                        transform: translate(-50%);
+                    }
+                }
+
+                & .card:hover .board {
+                    height: 100%;
+
+                    & .txt {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+
+                        & h3 {
+                            color: orange;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    & .service {
+        width: 100%;
+
+        /* height: 130vh; */
+        & .sContainer {
+            width: 100%;
+            text-align: center;
+
+            & .sTitle {
+                margin: 3% 0;
+
+                & .sLogo {
+                    width: 80px;
+                    height: 80px;
+                    vertical-align: bottom;
+                }
+
+                & h2 {
+                    display: block;
+                    z-index: 3;
+                    font-size: 2.5rem;
+                    margin: 1.5% 0;
+                }
+
+                & h3 {
+                    display: block;
+                    color: gray;
+                    z-index: 3;
+                    width: 100%;
+                    font-size: 1.5rem;
+                    font-family: "Courgette";
+                }
+            }
+
+            & .sCard {
+                width: 60%;
+                display: flex;
+                flex-wrap: wrap;
+                margin: auto;
+
+                & .item {
+                    display: flex;
+                    justify-content: flex-end;
+                    border-radius: 10px;
+                    width: calc((100% - var(--sCardCount) * var(--sCardMargin) * 2) / var(--sCardCount));
+                    margin: var(--sCardMargin);
+                    height: 360px;
+                    position: relative;
+                    transition: .3s;
+
+                    & img {
+                        border-radius: 10px;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+
+                    & .board {
+                        border-radius: 10px;
+                        width: 100%;
+                        height: 25%;
+                        text-align: center;
+                        display: block;
+                        background-color: rgba(0, 0, 0, 0.61);
+                        position: absolute;
+                        bottom: 0;
+                        transition: .6s;
+
+                        & .txt {
+                            color: white;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+
+                            & h3 {
+                                margin: 4% 0;
+                                font-size: 1.5rem;
+                            }
+
+                            & h4 {
+                                margin: 4% 0;
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+
+                & .item:hover .board {
+                    height: 100%;
+
+                    & h3 {
+                        color: orange;
+                    }
+                }
+            }
+        }
+
+        & .top {
+            width: 100%;
+            display: flex;
+
+            & h3 {
+                border: 1px solid orange;
+                border-radius: 8px;
+                width: 80px;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: .5% auto;
+                cursor: pointer;
+                transition: .3s;
+            }
+
+            & h3:hover {
+                background-color: orange;
+                color: white;
+            }
+        }
+    }
+}
+
+footer {
+    background-color: black;
+    color: white;
+    width: 100%;
+
+    .top {
+        background-image: url(/image/footer.jpg);
+        background-attachment: fixed;
+        width: 100%;
+        /* height: 50vh; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+
+        & .tContainer {
+            width: 60%;
+            padding: 2%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & .video {
+                width: 50%;
+
+                iframe {
+                    width: 100%;
+                }
+            }
+
+            & .text {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+
+                & h2 {
+                    font-size: 2.5rem;
+                }
+
+                & h3 {
+                    margin: 1% 0;
+                }
+
+                & p {
+                    font-weight: bolder;
+                    line-height: 1.8;
+                    margin: 1% 0;
+                }
+
+                & .more {
+                    width: 100%;
+                    display: flex;
+
+                    & h3 {
+                        border: 1px solid orange;
+                        border-radius: 8px;
+                        width: 80px;
+                        height: 30px;
+                        padding: 3%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin: .5% auto;
+                        cursor: pointer;
+                        transition: .3s;
+                    }
+
+                    & h3:hover {
+                        background-color: orange;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+
+    & .top::before {
+        content: '';
+        display: flex;
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 30%;
+    }
+
+    /* @media screen and (max-width:1024px) {
+    & .tContainer{
+      flex-direction: column;
+      & .video{
+        width: 100%;
+        background-color: red;
+      }
+      & .text{
+        width: 100%;
+      }
+    }
+    
+    } */
+}

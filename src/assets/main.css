@@ -6,7 +6,7 @@
   --nCardCount:3;
   --nCardMargin:2%;
   --sCardCount:3;
-  --sCardMargin:1.5%;
+  --sCardMargin:1%;
   --fz:16px;
 }
 
@@ -17,4 +17,21 @@
   padding: 0;
   box-sizing: border-box;
   font-style: var(--fz);
+}
+
+@media screen and (max-width:1024px) {
+  :root{
+    --nCardCount:2;
+    --nCardMargin:3%;
+    --sCardCount:2;
+    --sCardMargin:2%;
+  }
+}
+
+@media screen and (max-width:768px) {
+  :root{
+    --nCardCount:1;
+    --nCardMargin:8% ;
+    --sCardCount:1;
+  }
 }

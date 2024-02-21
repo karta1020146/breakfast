@@ -279,14 +279,15 @@
         transition: rotate .2s .2s;
       }
       #menu_control:checked ~ nav{
-        opacity: 1;
+        transition: .3s;
+        left: 0;
       }
       nav{
         background-color:#353535;
         width: 100%;
         position: absolute;
         top:80px;
-        opacity: 0;
+        left: -100%;
         z-index: 10;
         transition: .3s;
         & a{
