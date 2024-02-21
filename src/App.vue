@@ -1,6 +1,7 @@
 <script setup>
   import { RouterLink, RouterView } from 'vue-router'
   import { ref, onMounted, computed, watch } from 'vue'
+  import { useToTop } from './composable/toTOP.js'
 
   const isFixed = ref(false)
 
@@ -20,6 +21,8 @@
   const fixedStyle = computed(()=>{
     return isFixed.value? 'fixedNav': 'absoluteNav'
   })
+
+  const {toTop} = useToTop()
 
 </script>
 
@@ -71,6 +74,9 @@
     </div>
   </header>
   <RouterView />
+  <div class="toTopBtn">
+    <h3 @click="toTop">^</h3>
+  </div>
   <footer>
     <div class="map">
       <div class="mContainer">
@@ -148,6 +154,24 @@
       & a:hover{
         color: orange;
       }  
+    }
+  }
+  .toTopBtn{
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    right: 3%;
+    bottom: 3%;
+    background-color: #1E1E1E;
+    z-index: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+    & h3{
+      color: #fff;
+      font-size: 2rem;
     }
   }
   footer{
@@ -286,6 +310,7 @@
       nav{
         background-color:#353535;
         width: 100%;
+        height: 100vh;
         position: absolute;
         top:80px;
         left: -100%;
@@ -297,6 +322,7 @@
           padding: 3% 0 3% 1.5%;
           color: white;
           border-bottom: 1px solid white;
+          font-size: 1.2rem;
         }
       }
     }
@@ -306,8 +332,5 @@
         padding: 1.5% 0;
       }
     }
-  }
-  @media screen and (max-width:768px) {
-    
   }
 </style>

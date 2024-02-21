@@ -1,6 +1,7 @@
 <script setup>
   import {ref} from 'vue'
   import { RouterLink, RouterView } from 'vue-router'
+  import { useToTop } from '../composable/toTOP'
   import slide from '../components/slide.vue'
   const serviceData = ref([
     {
@@ -60,12 +61,9 @@
         date:'2023-11-01',
     },
   ])
-  const toTop =(() =>{
-    window.scrollTo({
-      top:0,
-      behavior:'smooth'
-    })
-  })
+
+  const {toTop} = useToTop()
+
 </script>
 
 <template>
