@@ -6,9 +6,15 @@
         & .text {
             height: auto;
         }
-        & .service .topBtn{
-            padding: 2%;
-        }
+        & .service{
+            & .sContainer .sCard{
+                width: 90%;
+            }
+            & .topBtn{
+                padding: 2%;
+            }
+        } 
+        
         & .news .container .cardCntainer{
             width: 90%;
         }
@@ -31,7 +37,11 @@
 }
 
 @media  screen and (max-width:768px) {
-    .news .container .cardCntainer{
-        width: 80%;
+    main .service .sContainer .sCard{
+        width: 60%;
+
+    }
+    main .news .container .cardCntainer{
+        width: 70%;
     }
 }
