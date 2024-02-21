@@ -6,6 +6,9 @@
     & main .text {
         height: auto !important;
     }
+    & .service .top {
+        padding: 3% !important;
+    } 
 
     & .tContainer {
         width: 80% !important;
