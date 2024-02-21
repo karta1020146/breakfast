@@ -5,13 +5,13 @@ import vue from '@vitejs/plugin-vue'
 // https://vitejs.dev/config/
 export default defineConfig({
   base:'/breakfast/',
-  css: {
-    preprocessorOptions: {
-      scss: {
-        additionalData: `@import "@/assets/style/global.scss";`
-      }
-    }
-  },
+  // css: {
+  //   preprocessorOptions: {
+  //     scss: {
+  //       additionalData: `@import "@/assets/style/global.scss";`
+  //     }
+  //   }
+  // },
   plugins: [
     vue(),
   ],

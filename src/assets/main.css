@@ -19,7 +19,7 @@
   font-style: var(--fz);
 }
 
-@media screen and (max-width:1024px) {
+/* @media screen and (max-width:1024px) {
   :root{
     --nCardCount:2;
     --nCardMargin:3%;
@@ -34,4 +34,4 @@
     --nCardMargin:8% ;
     --sCardCount:1;
   }
-}
+} */
