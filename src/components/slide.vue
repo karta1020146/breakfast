@@ -19,7 +19,7 @@
         {
             id:4,
             img:'./image/breakfast4.jpg',
-            text:'Perfext to Eat',
+            text:'Perfect to Eat',
         },
         {
             id:5,
