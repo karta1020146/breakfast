@@ -99,7 +99,7 @@
   </footer>
 </template>
 
-<style scoped>
+<style>
   .fixedNav{
     position: fixed;
     height: 80px;
