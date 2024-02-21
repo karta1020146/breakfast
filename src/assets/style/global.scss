@@ -8,7 +8,7 @@
     --nCardMargin: 2%;
     --sCardCount: 3;
     --sCardMargin: 1%;
-    --fz: 16px;
+    --fz:16px;
 }
 
 *,
@@ -17,7 +17,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-style: var(--fz);
+    font-size: var(--fz);
 }
 
 @media screen and (max-width:1024px) {
@@ -34,5 +34,7 @@
         --nCardCount: 1;
         --nCardMargin: 8%;
         --sCardCount: 1;
+        --sCardMargin: 2%;
+        --fz:14px;
     }
 }

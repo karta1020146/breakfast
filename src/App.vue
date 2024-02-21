@@ -100,7 +100,7 @@
 </template>
 
 <style lang="scss">
-  @import "@/assets/style/global.scss";
+  // @import "@/assets/style/global.scss";
   .fixedNav{
     position: fixed;
     height: 80px;

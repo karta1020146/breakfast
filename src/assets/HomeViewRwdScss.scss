@@ -8,16 +8,16 @@
     }
 
     & .tContainer {
-        width: 80% ;
+        width: 80% !important;
         flex-direction: column;
 
         & .video {
-            width: 100% ;
+            width: 100% !important;
             padding: 5%;
         }
 
         & .text {
-            width: 100% ;
+            width: 100% !important;
         }
     }
 

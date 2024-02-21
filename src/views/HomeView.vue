@@ -129,7 +129,7 @@
           </div>
         </div>
       </div>
-      <div class="top">
+      <div class="topBtn">
         <h3 @click="toTop">Top</h3>
       </div>
     </div>
@@ -154,6 +154,7 @@
   
 </template>
 <style lang="scss" scoped>
-  @import url(../assets/style/HomeView.scss);
-  @import url(../assets/style/HomeViewRwd.scss);
+  @import'../assets/style/global.scss';
+  @import'../assets/style/HomeView.scss';
+  @import'../assets/style/HomeViewRwd.scss';
 </style>
