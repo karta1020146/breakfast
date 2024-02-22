@@ -2,9 +2,18 @@
     main{
         & .image {
             height: auto;
+            & .banner{
+                width: 60%;
+            }
+            & .logo{
+                width: 50px;
+            }
         }
         & .text {
             height: auto;
+            & h3{
+                width: 33.333%;
+            }
         }
         & .service{
             & .sContainer .sCard{
@@ -44,4 +53,12 @@
     main .news .container .cardCntainer{
         width: 70%;
     }
+
+    main .image .banner {
+        width: 90%;
+    }
+
+    main .text h3{
+        width: 60%;
+    } 
 }
