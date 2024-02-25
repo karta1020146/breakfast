@@ -6,9 +6,8 @@
   const isFixed = ref(false)
 
   const scrollHandler = () => {
-    const currentScroll = window.scrollY || 
-    document.documentElement.scrollTop;
-    if (window.scrollY >= 800) {
+    const currentScroll = window.scrollY;
+    if (currentScroll >= 800) {
       isFixed.value = true;
     } else {
       isFixed.value = false;

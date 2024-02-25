@@ -1,3 +1,16 @@
+@mixin bottombtn{
+    border: 1px solid orange;
+    border-radius: 8px;
+    width: 80px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .5% auto;
+    cursor: pointer;
+    transition: .3s;
+}
+
 header {
     width: 100%;
     background-color: white;
@@ -290,16 +303,7 @@ main {
             padding: 1%;
 
             & h3 {
-                border: 1px solid orange;
-                border-radius: 8px;
-                width: 80px;
-                height: 30px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin: .5% auto;
-                cursor: pointer;
-                transition: .3s;
+                @include bottombtn
             }
 
             & h3:hover {
@@ -369,17 +373,7 @@ footer {
                     display: flex;
 
                     & h3 {
-                        border: 1px solid orange;
-                        border-radius: 8px;
-                        width: 80px;
-                        height: 30px;
-                        padding: 3%;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        margin: .5% auto;
-                        cursor: pointer;
-                        transition: .3s;
+                        @include bottombtn
                     }
 
                     & h3:hover {
