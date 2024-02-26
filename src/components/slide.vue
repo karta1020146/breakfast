@@ -135,6 +135,7 @@
     justify-content: space-between;
     position: absolute;
     top: 50%;
+    transform: translate(0, -50%);
     & span {
         width: 60px;
         height: 60px;
@@ -157,7 +158,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        display: none;
+        /* display: none; */
         span {
             margin: 0 4%;
             border-radius: 50%;

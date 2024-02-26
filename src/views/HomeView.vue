@@ -153,7 +153,7 @@
   
 </template>
 <style lang="scss" scoped>
-  @import'../assets/style/global.scss';
+  // @import'../assets/style/global.scss';
   @import'../assets/style/HomeView.scss';
   @import'../assets/style/HomeViewRwd.scss';
 </style>
