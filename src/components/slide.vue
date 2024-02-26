@@ -71,9 +71,9 @@
         </div>
         <div class="control">
             <span @click="preHandler">&larr;</span>
-            <div class="center">
+            <!-- <div class="center">
                 <span v-for="item of data" :key="item.id" @click="carShow(item.id)"> </span>
-            </div>
+            </div> -->
             <span @click="nextHandler">&rarr;</span>
         </div>
     </div>
@@ -158,7 +158,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        /* display: none; */
+        display: none;
         span {
             margin: 0 4%;
             border-radius: 50%;
